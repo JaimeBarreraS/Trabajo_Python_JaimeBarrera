@@ -10,14 +10,14 @@ Python
 
 ## Caracteristicas
 
-Documento json [medicamentos.json] En este archivo se almacena toda la informacion de los **medicamentos** que vamos a usar en nuestro proyecto.
-Documento json [ventas.json] En este archivo se almacena toda la informacion de las **ventas** que vamos a usar en nuestro proyecto.
-Documento json [compras.json] En este archivo se almacena toda la informacion de las compras **compras** que vamos a usar en nuestro proyecto.
-Documento json [proveedores.json] En este archivo se almacena toda la informacion de los **proveedores** que vamos a usar en nuestro proyecto.
-Documento json [pacientes.json] En este archivo se almacena toda la informacion de los **pacientes** que vamos a usar en nuestro proyecto.
-Documento json [empleados.json] En este archivo se almacena toda la informacion de los **empleados** que vamos a usar en nuestro proyecto.
-Documento de python [main.py] este contiene la estructura de nuestro proyecto al igual que la parte logica y el funcionamiento.
-Documento [README.MD] contiene la informacion y descripcion de el proyecto.
+- Documento json [medicamentos.json] En este archivo se almacena toda la informacion de los **medicamentos** que vamos a usar en nuestro proyecto.
+- Documento json [ventas.json] En este archivo se almacena toda la informacion de las **ventas** que vamos a usar en nuestro proyecto.
+- Documento json [compras.json] En este archivo se almacena toda la informacion de las compras **compras** que vamos a usar en nuestro proyecto.
+- Documento json [proveedores.json] En este archivo se almacena toda la informacion de los **proveedores** que vamos a usar en nuestro proyecto.
+- Documento json [pacientes.json] En este archivo se almacena toda la informacion de los **pacientes** que vamos a usar en nuestro proyecto.
+- Documento json [empleados.json] En este archivo se almacena toda la informacion de los **empleados** que vamos a usar en nuestro proyecto.
+- Documento de python [main.py] este contiene la estructura de nuestro proyecto al igual que la parte logica y el funcionamiento.
+- Documento [README.MD] contiene la informacion y descripcion de el proyecto.
 
 ## Estructura
 
