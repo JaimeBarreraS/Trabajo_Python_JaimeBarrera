@@ -51,4 +51,4 @@ Este sistema de gestión integral proporcionará a la farmacia las herramientas 
 
 ## Desarrollado
 
-Este proyecto fue desarrollado por Jaime Barrera Sandoval estudiante de campuslands.
+Este proyecto fue desarrollado por **Jaime Barrera Sandoval** estudiante de campuslands.
