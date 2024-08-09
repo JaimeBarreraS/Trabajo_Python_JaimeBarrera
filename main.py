@@ -1,33 +1,35 @@
 import json
 from colorama import Fore, Style
 
-def cargar():
-    with open("info.json", 'r' ) as f:
-        info=json.load(f)
+def cargar_json(archivo):
+    with open(archivo, 'r') as f:
+        return json.load(f)
 
-def guardar(info):
-    with open("info.json", 'w') as f:
-        json.dump(info,f, indent=4)  
+def guardar_json(archivo, datos):
+    with open(archivo, 'w') as f:
+        json.dump(datos, f, indent=4)
 
+inventario = cargar_json("medicamentos.json")
+empleados = cargar_json("empleados.json")
 while True: 
     print(Fore.YELLOW + "=========================" + Style.RESET_ALL)
-    print(Fore.GREEN + "   BIENVENDIDOS PANCAMP   " + Style.RESET_ALL)
+    print(Fore.GREEN + "   BIENVENDIDOS FARMACIA  " + Style.RESET_ALL)
     print(Fore.YELLOW + "=========================" + Style.RESET_ALL)
     print(Fore.GREEN + "        GESTION      " + Style.RESET_ALL)
     print(Fore.YELLOW + "1. Ventas" + Style.RESET_ALL)
     print(Fore.YELLOW + "2. Compras" + Style.RESET_ALL)
-    print(Fore.YELLOW + "3. Generacion de informes" + Style.RESET_ALL)
+    print(Fore.YELLOW + "3. Inventario" + Style.RESET_ALL)
     print(Fore.RED + "0. Salir" + Style.RESET_ALL) 
     print("")
     opcion=int(input("Selecciona una opcion: "))
 
     if opcion==0: #Salir del programa
-        print(Fore.BLACK + "Gracias por comprar en PANCAMP" + Style.RESET_ALL)
+        print(Fore.BLACK + "Gracias por comprar" + Style.RESET_ALL)
         break
 
     elif opcion==1:
         print(Fore.GREEN + "---- VENTAS ----" + Style.RESET_ALL)
-        info={
+        nuevo_empleado={
             "cliente":{
                 "fecha_venta": input("Ingresa la fecha de venta: "),
                 "mombre": input("Ingresa los nombres del cliente: "),
@@ -41,7 +43,8 @@ while True:
                 }
                 }
         }
-        guardar(info)
+        empleados.append(nuevo_empleado) 
+        guardar_json("empleados.json", empleados)
         input(Fore.CYAN + "Presiona Enter para continuar..." + Style.RESET_ALL)
 
     elif opcion==2:
@@ -56,5 +59,11 @@ while True:
                 "precio_producto_comprado": int(input("Ingresa el precio de compra del producto: ")),
                 }
         }
-        guardar(info)
         input(Fore.CYAN + "Presiona Enter para continuar..." + Style.RESET_ALL)
+
+    elif opcion==3:
+        for item in inventario:
+                print("=============================")
+                print(f" - Nombre: {item['nombre']}")
+                print(f" - Cantidad: {item['stock']}")
+                print(f" - Precio: {item['precio']} ")
